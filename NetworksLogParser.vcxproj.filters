@@ -13,10 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\logtypes">
+      <UniqueIdentifier>{1c918be2-74de-4454-9326-d8b7bf3eb079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\logtypes">
+      <UniqueIdentifier>{2d1cda39-5a81-4e3c-a86b-704ddc7627c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NetworksLogParser.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\logtypes\ping.cpp">
+      <Filter>Source Files\logtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logtypes\traceroute.cpp">
+      <Filter>Source Files\logtypes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logtypes\wget.cpp">
+      <Filter>Source Files\logtypes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\logtypes\traceroute.h">
+      <Filter>Header Files\logtypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logtypes\ping.h">
+      <Filter>Header Files\logtypes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logtypes\wget.h">
+      <Filter>Header Files\logtypes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

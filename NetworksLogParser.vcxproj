@@ -151,7 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="NetworksLogParser.cpp" />
+    <ClCompile Include="src\logtypes\ping.cpp" />
+    <ClCompile Include="src\logtypes\traceroute.cpp" />
+    <ClCompile Include="src\logtypes\wget.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\logtypes\ping.h" />
+    <ClInclude Include="src\logtypes\traceroute.h" />
+    <ClInclude Include="src\logtypes\wget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
