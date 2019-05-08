@@ -1,0 +1,24 @@
+traceroute to bks-speedtest-1.tele2.net (90.130.74.113), 100 hops max, 60 byte packets
+ 1  cmp-0-gw.uea.ac.uk (139.222.0.1)  1.310 ms  1.817 ms  1.853 ms
+ 2  core-from-cmp.uea.ac.uk (10.0.0.1)  0.794 ms  0.764 ms  0.842 ms
+ 3  pfw-from-campus.uea.ac.uk (193.62.92.124)  1.116 ms  1.086 ms  1.058 ms
+ 4  bound-from-pfw.uea.ac.uk (193.62.92.71)  1.689 ms  1.541 ms  1.398 ms
+ 5  boundary1-from-pfw.uea.ac.uk (193.62.92.70)  1.775 ms  1.520 ms  1.308 ms
+ 6  xe-2-0-0.lowdss-ban1.ja.net (146.97.41.201)  4.117 ms  4.015 ms  3.979 ms
+ 7  ae26.lowdss-sbr1.ja.net (146.97.35.245)  4.087 ms  4.078 ms  4.077 ms
+ 8  ae31.londtw-sbr2.ja.net (146.97.33.30)  7.362 ms  7.331 ms  7.711 ms
+ 9  ae28.londtt-sbr1.ja.net (146.97.33.61)  20.403 ms  20.374 ms  20.346 ms
+10  ae0.londtt-ban2.ja.net (146.97.35.194)  7.589 ms  7.559 ms  7.530 ms
+11  ldn-b5-link.telia.net (62.115.148.160)  7.503 ms  7.416 ms  7.523 ms
+12  ldn-bb4-link.telia.net (213.155.132.196)  7.696 ms ldn-bb3-link.telia.net (213.155.132.194)  10.160 ms ldn-bb4-link.telia.net (213.155.132.196)  7.587 ms
+13  prs-bb3-link.telia.net (62.115.134.92)  14.783 ms prs-bb4-link.telia.net (62.115.114.229)  14.675 ms  14.545 ms
+14  ffm-bb3-link.telia.net (62.115.123.12)  23.015 ms ffm-bb4-link.telia.net (62.115.114.99)  24.480 ms ffm-bb4-link.telia.net (62.115.122.139)  24.451 ms
+15  ffm-b4-link.telia.net (62.115.120.6)  23.638 ms  23.610 ms ffm-b4-link.telia.net (62.115.120.0)  23.644 ms
+16  tele2-ic-324306-ffm-b4.c.telia.net (62.115.154.25)  24.419 ms  24.458 ms  24.424 ms
+17  fra36-core-1.bundle-ether2.tele2.net (130.244.64.186)  24.108 ms  24.960 ms  25.299 ms
+18  lim-core-1.bundle-ether6.tele2.net (130.244.205.5)  37.388 ms  37.614 ms  37.373 ms
+19  sdn-core-2.bundle-ether13.tele2.net (130.244.86.38)  37.946 ms  38.111 ms  38.373 ms
+20  avk-core-1.bundle-ether11.tele2.net (130.244.39.186)  47.254 ms  46.286 ms  47.196 ms
+21  tvt-core-1.bundle-ether50.tele2.net (130.244.79.57)  54.945 ms  54.917 ms  55.735 ms
+22  bks4-core-1.bundle-ether40.tele2.net (130.244.49.161)  51.024 ms  51.643 ms  51.940 ms
+23  bks4-core-1.bundle-ether40.tele2.net (130.244.49.161)  51.602 ms !X * *
