@@ -8,12 +8,12 @@ namespace logparser {
 		class wget {
 
 		public:
-			wget(string throughput);
+			wget(float kbps);
 			/*  Empty wget constructor.
 				This is used for reading from input streams.	*/
-			wget() : wget("? KB/s") {};
+			wget() : wget(0) {};
 
-			string throughput;
+			float kbps;
 
 			friend ostream& operator<<(ostream& out, const wget& value);
 			friend istream& operator>>(istream& in, wget& value);
