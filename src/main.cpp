@@ -7,6 +7,8 @@
 #include <vector>
 
 #include "logtypes/wget.h"
+#include "logtypes/ping.h"
+#include "logtypes/traceroute.h"
 
 using namespace std;
 using namespace logparser::logtypes;
@@ -31,7 +33,19 @@ int main(int argc, char* argv[])
 
 		if (firstLine.rfind("PING") == 0) {
 			cout << "Detected ping log type..." << endl;
-			cout << "ERROR: Not Yet Implemented" << endl;
+			vector<ping> rtts;
+			ping rtt;
+
+			while (currentLogFile >> rtt) {
+				rtts.push_back(rtt);
+				cout << "Parsed RTT: " << rtt.rttAvg << " ms" << endl;
+			}
+
+			currentCsvFile << "rtt min, rtt avg, rtt max, rtt mdev" << endl;
+			for (ping rtt : rtts) {
+				currentCsvFile << rtt << endl;
+			}
+
 			cout << "Done." << endl;
 		}
 		else if (firstLine.rfind("traceroute") == 0) {
