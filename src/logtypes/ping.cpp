@@ -24,12 +24,12 @@ namespace logparser {
 				string currentLine;
 				getline(in, currentLine);
 
-				regex throughputRegex("[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}");
-				smatch throughputMatch;
+				regex pingRegex("[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}");
+				smatch pingMatch;
 
-				if (regex_search(currentLine, throughputMatch, throughputRegex))
+				if (regex_search(currentLine, pingMatch, pingRegex))
 				{
-					string matchString = throughputMatch[0];
+					string matchString = pingMatch[0];
 					stringstream matchStream(matchString);
 					
 					string rttMinString, rttAvgString, rttMaxString, rttMDevString;
