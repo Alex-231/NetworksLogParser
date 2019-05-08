@@ -6,28 +6,39 @@
 namespace logparser {
 	namespace logtypes {
 
-		ping::ping(float rttMin, float rttAvg, float rttMax, float rttMDev) {
+		ping::ping(float rttMin, float rttAvg, float rttMax, float rttMDev, vector<float> rtts) {
 			this->rttMin = rttMin;
 			this->rttAvg = rttAvg;
 			this->rttMax = rttMax;
 			this->rttMDev = rttMDev;
+			this->rtts = rtts;
 		}
 
 		ostream& operator<<(ostream& out, const ping& value)
 		{
-			return out << value.rttMin << ',' << value.rttAvg << ',' << value.rttMax << ',' << value.rttMDev;
+			out << "rtts (ms),";
+
+			for (float rtt : value.rtts) {
+				out << rtt << ',';
+			}
+			out << endl << "rtt min/avg/max/mdev," << value.rttMin << ',' << value.rttAvg << ',' << value.rttMax << ',' << value.rttMDev;
+
+			return out;
 		}
 
 		istream& operator>>(istream& in, ping& value)
 		{
+			value.rtts = vector<float>();
+
 			while (!in.eof()) {
 				string currentLine;
 				getline(in, currentLine);
 
-				regex pingRegex("[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}");
+				regex pingEndRegex("[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}/[0-9.]{1,}");
+				regex pingRegex("[0-9.]{1,} ms");
 				smatch pingMatch;
 
-				if (regex_search(currentLine, pingMatch, pingRegex))
+				if (regex_search(currentLine, pingMatch, pingEndRegex))
 				{
 					string matchString = pingMatch[0];
 					stringstream matchStream(matchString);
@@ -44,6 +55,10 @@ namespace logparser {
 					value.rttMax = stof(rttMaxString);
 					value.rttMDev = stof(rttMDevString);
 					return in;
+				}
+				else if (regex_search(currentLine, pingMatch, pingRegex))
+				{
+					value.rtts.push_back(stof(pingMatch[0]));
 				}
 			}
 
