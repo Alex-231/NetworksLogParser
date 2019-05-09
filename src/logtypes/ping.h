@@ -9,7 +9,7 @@ namespace logparser {
 
 		public:
 			ping(float rttMin, float rttAvg, float rttMax, float rttMDev, vector<float> rtts);
-			/*  Empty wget constructor.
+			/*  Empty ping constructor.
 				This is used for reading from input streams.	*/
 			ping() : ping(0, 0, 0, 0, vector<float>()) {};
 

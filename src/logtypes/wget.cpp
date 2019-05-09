@@ -27,6 +27,7 @@ namespace logparser {
 				{
 					string matchString = throughputMatch[0];
 
+					// Normalise the throughput value.
 					int multiplier = 1;
 					switch (matchString[matchString.length() - 4]) {
 					case 'G':
@@ -39,7 +40,6 @@ namespace logparser {
 					default:
 						break;
 					}
-
 
 					value.kbps = stof(matchString) * multiplier;
 					return in;

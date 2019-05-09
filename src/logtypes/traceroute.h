@@ -9,7 +9,7 @@ namespace logparser {
 
 		public:
 			traceroute(vector<string> route1, vector<string> route2, vector<string> route3);
-			/*  Empty wget constructor.
+			/*  Empty traceroute constructor.
 				This is used for reading from input streams.	*/
 			traceroute() : traceroute(vector<string>(), vector<string>(), vector<string>()) {};
 
