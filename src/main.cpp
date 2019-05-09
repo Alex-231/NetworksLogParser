@@ -45,8 +45,6 @@ int main(int argc, char* argv[])
 				cout << "Parsed RTT: " << rtt.rttAvg << " ms" << endl;
 			}
 
-			cout << "Parsed RTT: " << rtt.rttAvg << " ms" << endl;
-
 			cout << "Writing csv file... (" << csvPath << ')' << endl;
 
 			for (ping rtt : rtts) {
@@ -86,8 +84,6 @@ int main(int argc, char* argv[])
 				throughputs.push_back(throughput);
 				cout << "Parsed Throughput: " << throughput.kbps << " KB/s" << endl;
 			}
-
-			cout << "Parsed Throughput: " << throughput.kbps << " KB/s" << endl;
 
 			float throughputSum = 0;
 			for (wget throughput : throughputs) {
